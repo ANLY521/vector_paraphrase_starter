@@ -22,6 +22,7 @@ def main(sts_dev, w2v_file):
     dev_texts, dev_y = parse_sts(sts_dev)
 
     # TODO 2: load word2vec using gensim KeyedVectors object
+    # WARNING: you may need to downgrade gensim to version 3.4
     w2v_vecs = None
 
     # TODO 3: Define the functions above that compose word representations into sentence representations
