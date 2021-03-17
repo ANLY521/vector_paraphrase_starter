@@ -39,5 +39,16 @@ def parse_sts(data_file):
 def sts_to_pi(texts, sts_labels, max_nonparaphrase, min_paraphrase):
     """Convert a dataset from semantic textual similarity to paraphrase.
     Remove any examples that are > max_nonparaphrase and < min_paraphrase."""
+    sts_labels = np.asarray(sts_labels)
+    pi_rows = [i for i,label in enumerate(sts_labels) if label >=min_paraphrase or label<=max_nonparaphrase]
 
-    return texts, sts_labels
+    pi_texts = [texts[i] for i in pi_rows]
+    # 1221 for dev
+    print(f"{len(pi_texts)} sentence pairs kept")
+
+    # using indexing to get the right rows out of labels
+    pi_labels = np.asarray(sts_labels)[pi_rows]
+    # convert to binary using threshold
+    pi_labels = pi_labels > max_nonparaphrase
+    return pi_texts, pi_labels
+

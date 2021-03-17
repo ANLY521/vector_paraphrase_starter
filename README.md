@@ -52,6 +52,9 @@ Example usage:
 
 ## `vector_pi.py`
 
+**WARNING:** you may need to downgrade gensim:
+`conda install gensim==3.4`
+
 * Train a logistic regression for paraphrase identification on the training data using four features:
     - BLEU
     - WER

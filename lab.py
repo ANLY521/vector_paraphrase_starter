@@ -1,5 +1,5 @@
 # coding: utf-8
-from gensim.models import KeyedVectors
+from gensim.models import KeyedVectors # WARNING: you may need to downgrade gensim to version 3.4
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from scipy.stats import pearsonr
@@ -33,6 +33,7 @@ def main(sts_dev, w2v_file):
     dev_texts, dev_y = parse_sts(sts_dev)
 
     # TODO 2: load word2vec using gensim KeyedVectors object
+    # WARNING: you may need to downgrade gensim to version 3.4
     w2v_vecs = KeyedVectors.load_word2vec_format(w2v_file, binary=False)
 
     # TODO 3: Define the functions above that compose word representations into sentence representations
