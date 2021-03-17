@@ -29,13 +29,14 @@ def w2v_sentence_product(sent, word2vec):
 
 
 def main(sts_dev, w2v_file):
-    # load the texts
+    # TODO 1: load the texts
     dev_texts, dev_y = parse_sts(sts_dev)
 
-    # load word2vec
+    # TODO 2: load word2vec using gensim KeyedVectors object
     w2v_vecs = KeyedVectors.load_word2vec_format(w2v_file, binary=False)
 
-    # get cosine similarities of every pair in dev
+    # TODO 3: Define the functions above that compose word representations into sentence representations
+    # TODO 4: get cosine similarities of every sentence pair in dev
     # if either sentence is completely out of vocabulary, record "0" as the similarity
     cos_sims_mean = []
 
@@ -70,6 +71,7 @@ def main(sts_dev, w2v_file):
         pair_similarity = cosine_similarity(t1_vector_product, t2_vector_product)[0, 0]
         cos_sims_product.append(pair_similarity)
 
+    # TODO 5: Measure correlation with STS labels for the two ways of computing word2vec sentence representations
     pearson_mean = pearsonr(cos_sims_mean, dev_y)
     print(f"word2vec mean pearsons: r={pearson_mean[0]:.03}")
 
