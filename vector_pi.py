@@ -1,6 +1,7 @@
 import argparse
 from util import parse_sts, sts_to_pi
 
+
 class SimilarityVectorizer:
     """Creates a vector of similarities for pairs of sentences"""
 
@@ -14,7 +15,6 @@ class SimilarityVectorizer:
         self.w2v_vectors = None # set this attribute to a KeyedVectors instance with loaded weights
 
         self.tfidf_vectorizer = None # set this attribute to a tfidf vectorizer that is fit to idf_corpus
-
 
     def tfidf_sim(self, t1, t2):
         """Takes two strings. Returns a float of cosine similarity between tfidf vectors

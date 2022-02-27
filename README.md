@@ -19,9 +19,9 @@ Precise results will vary a little based on preprocessing choices.
 
 | Model Name | Accuracy | Precision | Recall | F1|
 | ---------- | -------- | --------- | ------- | ---|
-| TFIDF cosine sim| ...
-| Logistic regression, featureset 1
-| Logistic regression, featureset 2 
+| TFIDF cosine sim| ... |
+| Logistic regression, featureset 1 |
+| Logistic regression, featureset 2  |
 
 
 TODO: Define featuresets 1 and 2 from the table
