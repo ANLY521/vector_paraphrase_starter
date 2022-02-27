@@ -19,9 +19,9 @@ Precise results will vary a little based on preprocessing choices.
 
 | Model Name | Accuracy | Precision | Recall | F1|
 | ---------- | -------- | --------- | ------- | ---|
-| TFIDF cosine sim| ...
-| Logistic regression, featureset 1
-| Logistic regression, featureset 2 
+| TFIDF cosine sim| ... |
+| Logistic regression, featureset 1 |
+| Logistic regression, featureset 2  |
 
 
 TODO: Define featuresets 1 and 2 from the table
@@ -52,7 +52,8 @@ Example usage:
 
 ## `vector_pi.py`
 
-**WARNING:** You may need to downgrade gensim to version 3.4. `conda install gensim==3.4`
+**WARNING:** you may need to downgrade gensim:
+`conda install gensim==3.4`
 
 * Train a logistic regression for paraphrase identification on the training data using four features:
     - BLEU
